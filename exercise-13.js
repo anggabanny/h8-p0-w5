@@ -1,5 +1,4 @@
 function sorting(arrNumber) {
-    console.log(arrNumber);
     for(var i = 0; i < arrNumber.length; i++){
         for(var j = 0; j < arrNumber.length; j++){
             // BUBBLE_SORT_NUMBER
@@ -21,7 +20,7 @@ function sorting(arrNumber) {
 
 function getTotal(arrNumber) {
     if (arrNumber.length == 0) {
-        return arrNumber
+        return ''
     }
 
     var terbesar = arrNumber[arrNumber.length-1];

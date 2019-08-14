@@ -6,7 +6,7 @@ function makanTerusRekursif(waktu) {
         return makan
     }
 
-    return makan + makanTerusRekursif(waktu - 15);
+    return makanTerusRekursif(waktu - 15) + makan;
 }
 
 // TEST CASES
