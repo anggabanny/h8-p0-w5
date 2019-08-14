@@ -2,9 +2,9 @@
 Hacktiv8 Phase 0 Week 5: Recursive, Regex, and Object Oriented Programming in JavaScript
 
 ### [Challenge] LIVE CODE 🔜
-### [Exercises 13] Most Frequent Largest Numbers :fire:
-### [Exercises 14] Password Generator :fire:
-### [Exercises 15] Makan Terus Rekursif :fire:
+### [Exercises 13] Most Frequent Largest Numbers 🔥
+### [Exercises 14] Password Generator 💯
+### [Exercises 15] Makan Terus Rekursif 🔥
 ### [Exercises 16] Total Digit Rekursif 🔜
 ### [Exercises 17] Kali Terus Rekursif 🔜
 ### [Exercises 5] Damage Calculation 🔜
