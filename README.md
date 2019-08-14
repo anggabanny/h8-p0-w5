@@ -5,7 +5,7 @@ Hacktiv8 Phase 0 Week 5: Recursive, Regex, and Object Oriented Programming in Ja
 ### [Exercises 13] Most Frequent Largest Numbers 🔥
 ### [Exercises 14] Password Generator 💯
 ### [Exercises 15] Makan Terus Rekursif 🔥
-### [Exercises 16] Total Digit Rekursif 🔜
+### [Exercises 16] Total Digit Rekursif 🔥
 ### [Exercises 17] Kali Terus Rekursif 🔜
 ### [Exercises 5] Damage Calculation 🔜
 ### [Exercises 6] Melee Ranged Grouping 🔜
