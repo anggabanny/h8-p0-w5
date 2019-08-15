@@ -30,7 +30,6 @@ function meleeRangedGrouping(str) {
         strBaru2.push(penampungArray)
     }
 
-    
     // Pengelompokan
     var ranged = []
     var melee = []
