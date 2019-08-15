@@ -25,4 +25,3 @@ console.log(paragraph.match(/a/gi));
 // tanda + di [a-z]+ itu brarti ngambilnya perkata bukan per-abjad, pemisahnya ya kalo ke temu selain abjad 
 var string = 'Walaupun regex banyak mengandung simbol, tapi tidak serumit seperti !@#%^%#$*( , ^%&*!!^& dan !#*#$&*@%#';
 console.log(string.match(/[a-z]+/gi));
-
