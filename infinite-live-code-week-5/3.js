@@ -27,73 +27,64 @@ Standard kelulusan adalah minimum 70.
 */
 
 function rapotAsrama(students) {
-  for(var i = 0; i < students.length; i++){
-    for(var j = 0; j < students.length-1; j++){
-      if (students[j].asrama > students[j+1].asrama) {
-        var temp = students[j].asrama
-        students[j].asrama = students[j+1].asrama
-        students[j+1].asrama = temp
-      }
-    }
-  }
+  var griffindor = []
+  var ravenclaw = []
+  var slyterin = []
 
-  var penampung = [[],[],[]]
   for(var i = 0; i < students.length; i++){
-    if (students[i].asrama == 'Griffindor') {
-      penampung[0].push(students[i])
-    } else if (students[i].asrama == 'Ravenclaw') {
-      penampung[1].push(students[i])
-    } else if (students[i].asrama == 'Slyterin') {
-      penampung[2].push(students[i])
+    switch (students[i].asrama) {
+      case 'Griffindor':{ griffindor.push(students[i]) ;break;} 
+      case 'Ravenclaw':{ ravenclaw.push(students[i]) ;break;} 
+      case 'Slyterin':{ slyterin.push(students[i]) ;break;} 
     }
   }
 
   var final = []
-  for(var i = 0 ; i < penampung[0].length; i++){
-      var tempG = {
-        asrama : penampung[0][i].asrama,
-        gagal : [],
-        lulus : []
-      }
-      
-      if (penampung[0][i].nilai <=70) {
-        tempG.gagal.push(penampung[0][i].nama)
-      } else if (penampung[0][i].nilai > 70) {
-        tempG.lulus.push(penampung[0][i].nama)
-      }
-  }
-  final.push(tempG)
 
-  for(var i = 0 ; i < penampung[1].length; i++){
-    var tempf = {
-      asrama : penampung[1][i].asrama,
-      gagal : [],
-      lulus : []
-    }
-    
-    if (penampung[1][i].nilai <=70) {
-      tempf.gagal.push(penampung[0][i].nama)
-    } else if (penampung[1][i].nilai > 70) {
-      tempf.lulus.push(penampung[1][i].nama)
+  var griffindorObj = {
+    asrama : '',
+    gagal : [],
+    lulus : []
+  }
+  for(var i = 0; i < griffindor.length; i++){
+    griffindorObj.asrama = griffindor[i].asrama
+    if (griffindor[i].nilai < 70) {
+      griffindorObj['gagal'].push(griffindor[i].nama)
+    } else {
+      griffindorObj['lulus'].push(griffindor[i].nama)
     }
   }
-  final.push(tempf)
-
-  for(var i = 0 ; i < penampung[2].length; i++){
-    var temph = {
-      asrama : penampung[2][i].asrama,
-      gagal : [],
-      lulus : []
-    }
-    
-    if (penampung[2][i].nilai < 70) {
-      temph.gagal.push(penampung[0][i].nama)
-    } else if (penampung[2][i].nilai >= 70) {
-      temph.lulus.push(penampung[2][i].nama)
+  final.push(griffindorObj)
+  
+  var ravenclawObj = {
+    asrama : '',
+    gagal : [],
+    lulus : []
+  }
+  for(var i = 0; i < ravenclaw.length; i++){
+    ravenclawObj.asrama = ravenclaw[i].asrama
+    if (ravenclaw[i].nilai < 70) {
+      ravenclawObj['gagal'].push(ravenclaw[i].nama)
+    } else {
+      ravenclawObj['lulus'].push(ravenclaw[i].nama)
     }
   }
+  final.push(ravenclawObj)
 
-  final.push(temph)
+  var slyterinObj = {
+    asrama : '',
+    gagal : [],
+    lulus : []
+  }
+  for(var i = 0; i < slyterin.length; i++){
+    slyterinObj.asrama = slyterin[i].asrama
+    if (slyterin[i].nilai < 70) {
+      slyterinObj['gagal'].push(slyterin[i].nama)
+    } else {
+      slyterinObj['lulus'].push(slyterin[i].nama)
+    }
+  }
+  final.push(slyterinObj)
 
   return final
 }

@@ -22,54 +22,27 @@ Function akan membaca data siswa dari input dan mengubahnya menjadi array of obj
 
 
 function dataSiswa(scoreRecord) {
-
-  if (scoreRecord.length == 0) {
-    return "tidak ada catatan hasil tes hari ini"
-  }
-  
-  var output = []
-  var temp = ''
-  for(var i = 0; i < scoreRecord.length; i++){
-    if (scoreRecord[i] == ',') {
-      output.push(temp)
-      temp = ''
-    } else{
-      temp+=scoreRecord[i]
+    if (scoreRecord.length == 0) {
+        return 'tidak ada catatan hasil tes hari ini'
     }
-  }
-  output.push(temp)
 
+    scoreRecord = scoreRecord.split(',')
 
-  var power = []
-  for(var j = 0; j < output.length; j++){
+    var temp = []
+    for(var i = 0; i < scoreRecord.length; i++){
+        temp.push(scoreRecord[i].split('-'))
+    }
+    
     var final = []
-    var temp1 = ''
-    for(var k = 0 ; k < output[j].length; k++){
-      if (output[j][k] == '-') {
-        final.push(temp1)
-        temp1 = ''
-      } else{
-        temp1+=output[j][k]
-      }
+    var obj = {}
+    for(var i = 0 ; i < temp.length; i++){
+        obj.id = temp[i][0];
+        obj.name = temp[i][1];
+        obj.score = temp[i][2];
+        final.push(obj)
+        obj = {}
     }
-    final.push(temp1)
-    power.push(final)
-  }
-
-  var finalFinal = []
-  for(var i = 0; i < power.length; i++){
-    var test = {}
-    for(var j = 0 ; j< power[i].length; j++){
-      test =  {
-        id: power[i][0],
-        name: power[i][1],
-        score: power[i][2],
-      }
-    }
-    finalFinal.push(test)
-  }
-
-  return finalFinal
+    return final
 }
 
 console.log(dataSiswa("001-Radith-88,002-Putra-100,003-Levy-83"))
