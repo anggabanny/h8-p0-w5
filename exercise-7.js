@@ -21,3 +21,4 @@ function hapusSimbol(str) {
     console.log(hapusSimbol('ma@#k!an~')); // makan
     console.log(hapusSimbol('coding')); // coding
     console.log(hapusSimbol('1+3-5*2=100')); // 1352100
+    

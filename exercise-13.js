@@ -39,6 +39,7 @@ function mostFrequentLargestNumbers(arrNumber) {
     return countHighest;
 }
 
+
 console.log(mostFrequentLargestNumbers([2, 8, 4, 6, 8, 5, 8, 4]));
 //'angka paling besar adalah 8 dan jumlah kemunculan sebanyak 3 kali'
 
