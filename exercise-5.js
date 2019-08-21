@@ -1,6 +1,5 @@
 function attack(damage) {
-    var calculationDamage = 2;
-    return damage - calculationDamage
+    return damage - 2
 }
 
 function damageCalculation(numberOfAttacks, damagePerAttack) {
