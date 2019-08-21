@@ -1,53 +1,48 @@
-function meleeRangedGrouping(str) {
-
-    // pisah berdasarkan koma
+function SplitLogic(data, separator) {
     var strBaru = [];
     var tempSementara = ''
-    for(var i = 0; i < str.length; i++){
-        if (str[i] == ',') {
+    for(var i = 0; i < data.length; i++){
+        if (data[i] == separator) {
             strBaru.push(tempSementara)
             tempSementara = ''
         } else {
-            tempSementara += str[i]
+            tempSementara += data[i]
         }
     }
     strBaru.push(tempSementara)
+    return strBaru
+}
 
-    // pisah berdasarkan pembatas di masing2 index
-    var strBaru2 = []
-    for(var j = 0; j < strBaru.length; j++){
-        var penampungArray = []
-        var tempSementara2 = ''
-        for(var k = 0; k < strBaru[j].length; k++){
-            if (strBaru[j][k] == '-') {
-                penampungArray.push(tempSementara2)
-                tempSementara2 = ''
-            } else {
-                tempSementara2 += strBaru[j][k]
-            }
-        }
-        penampungArray.push(tempSementara2)
-        strBaru2.push(penampungArray)
-    }
-
-    // Pengelompokan
+function kelompokin(data, check) {
     var ranged = []
     var melee = []
     var output = []
-    for(var l = 0; l < strBaru2.length; l++){
-        if (strBaru2[l][1] == 'Ranged') {
-            ranged.push(strBaru2[l][0])
-        } else if (strBaru2[l][1] == 'Melee'){
-            melee.push(strBaru2[l][0])
+    for(var l = 0; l < data.length; l++){
+        if (data[l][1] == 'Ranged') {
+            ranged.push(data[l][0])
+        } else if (data[l][1] == 'Melee'){
+            melee.push(data[l][0])
         }
     }
 
-    if (str.length == 0) {
+    if (check.length == 0) {
         return output
     } else {
         output.push(ranged,melee)
         return output
     }
+}
+
+function meleeRangedGrouping(str) {
+    var SplitSatu = SplitLogic(str, ',')
+
+    var strBaru2 = []
+    for(var i = 0 ; i < SplitSatu.length; i++){
+        var strNew = SplitLogic(SplitSatu[i], '-')
+        strBaru2.push(strNew)
+    }
+    var KelompokinDund = kelompokin(strBaru2, str) 
+    return KelompokinDund
 }
 
 // TEST CASE
