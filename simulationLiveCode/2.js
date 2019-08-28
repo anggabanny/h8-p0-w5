@@ -43,7 +43,6 @@ function diagonAlley(word) {
   }
 }
 
-
 // TEST CASES
 
 diagonAlley('kuroko')

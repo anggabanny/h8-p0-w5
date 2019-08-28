@@ -52,7 +52,6 @@
  * Rules:
  * 1. Dilarang menggunakan built in function apapun selain .push() dan .unshift()
  */
-
 function train(pokemon, candy) {
     var yourPokemon = pokemon.name
     var yourLevel = pokemon.level + candy

@@ -54,7 +54,6 @@
  * | samurai  | knife, katana        |
  * | monk     | knuckle              |
 */
-
 function userWeapon(user, weapon) {
   var username = user.name
   if (user.job == 'swordman') {

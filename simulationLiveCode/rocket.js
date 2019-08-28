@@ -9,7 +9,6 @@
   [RULES]
   1. Tidak boleh menggunakan built in function selain .push() dan .unshift()
 */
-
 function order(words) {
   var temp = []
   var final = ''

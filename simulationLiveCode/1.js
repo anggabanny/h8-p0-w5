@@ -24,7 +24,6 @@ OUTPUT:
   [7, 6, 5, 5]
 */
 
-
 function sortAndFilterAboveMean(numbers) {
   var temp = 0 ;
   for(var i = 0; i < numbers.length; i++){

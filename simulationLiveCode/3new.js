@@ -44,7 +44,6 @@ OUTPUT: simbol # ditempatkan pada posisi indeks (4,1)
   ['*', '*', '*', ' ', '*', '*', '*'] ]
 
 */
-
 function findEmptySeat(room) {
     var tangga = Math.floor(room[0].length/2)
     var count = 0
